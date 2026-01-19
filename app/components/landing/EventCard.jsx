@@ -1,4 +1,6 @@
+import ActionButtons from "@/app/components/ActionButtons";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const EventCard = () => {
@@ -8,14 +10,14 @@ const EventCard = () => {
         src="/google-io-2023-1.png"
         alt="Event 1"
         className="w-full"
-        width={1080}
-        height={720}
+        width={500}
+        height={500}
       />
 
       <div className="p-3">
-        <a href="./details.html" className="font-bold text-lg">
+        <Link href="./details" className="font-bold text-lg">
           Google I/O Extended
-        </a>
+        </Link>
         <p className="text-[#9C9C9C] text-sm mt-1">
           Rangpur, Dhaka, Bangladesh, Rangpur, Bangladesh
         </p>
@@ -26,15 +28,8 @@ const EventCard = () => {
         </div>
 
         {/* Buttons  */}
-        <div className="w-full flex gap-4 mt-4">
-          {/* bg-indigo-600 indicating Active  */}
-          <button className="w-full bg-indigo-600 hover:bg-indigo-800">
-            Interested
-          </button>
-
-          {/* bg-green-600 indicating Active  */}
-          <button className="w-full">Going</button>
-        </div>
+        <ActionButtons />
+        
       </div>
     </div>
   );
