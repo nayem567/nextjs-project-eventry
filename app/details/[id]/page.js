@@ -6,7 +6,6 @@ import { getEventById } from '@/db/queries'
 const DetailsPage = async ({ params }) => {
 
     const eventId = params.id;
-
     const event = await getEventById(eventId);
 
     return (
